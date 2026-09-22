@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>31. Validate Name, Email, Phone, Password</title>
+<style>body{font-family:Arial;padding:40px}input{display:block;margin:8px 0;padding:6px;width:250px}.error{color:red;font-size:.85em}</style>
+</head>
+<body>
+<form onsubmit="return validateAll()">
+  <input id="name" placeholder="Name">
+  <input id="email" placeholder="Email">
+  <input id="phone" placeholder="Phone (10 digits)">
+  <input id="password" type="password" placeholder="Password (min 6 chars)">
+  <button type="submit">Submit</button>
+</form>
+<div id="errors" class="error"></div>
+<script>
+function validateAll() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const password = document.getElementById("password").value;
+  const errors = [];
+
+  if (name.length < 2) errors.push("Name must be at least 2 characters.");
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push("Invalid email format.");
+  if (!/^\d{10}$/.test(phone)) errors.push("Phone must be exactly 10 digits.");
+  if (password.length < 6) errors.push("Password must be at least 6 characters.");
+
+  document.getElementById("errors").innerHTML = errors.join("<br>");
+  if (errors.length === 0) alert("All fields valid!");
+  return false;
+}
+</script>
+</body></html>

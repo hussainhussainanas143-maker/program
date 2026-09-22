@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>33. Simple Quiz Application</title>
+<style>body{font-family:Arial;padding:40px}button{display:block;margin:6px 0;padding:8px}</style>
+</head>
+<body>
+<div id="quiz"></div>
+<div id="score"></div>
+<script>
+const questions = [
+  { q: "Capital of France?", options: ["Paris", "London", "Rome"], answer: "Paris" },
+  { q: "2 + 2 = ?", options: ["3", "4", "5"], answer: "4" },
+  { q: "JS stands for?", options: ["JavaScript", "JavaSource", "JustScript"], answer: "JavaScript" }
+];
+let current = 0, score = 0;
+
+function renderQuestion() {
+  if (current >= questions.length) {
+    document.getElementById("quiz").innerHTML = "<h3>Quiz Complete!</h3>";
+    document.getElementById("score").textContent = `Score: ${score} / ${questions.length}`;
+    return;
+  }
+  const q = questions[current];
+  document.getElementById("quiz").innerHTML = `<h3>${q.q}</h3>` +
+    q.options.map(opt => `<button onclick="answer('${opt}')">${opt}</button>`).join("");
+}
+function answer(choice) {
+  if (choice === questions[current].answer) score++;
+  current++;
+  renderQuestion();
+}
+renderQuestion();
+</script>
+</body></html>

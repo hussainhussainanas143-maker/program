@@ -1,0 +1,5 @@
+21. DOM & Event-Based Experiments
+----------------------------------
+This is a section header from the question list, not an individual
+coding task. See files 22-36 for the DOM & event-based experiments
+in this section.

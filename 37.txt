@@ -1,0 +1,5 @@
+37. Advanced JavaScript Lab Questions
+--------------------------------------
+This is a section header from the question list, not an individual
+coding task. See files 38-67 for the advanced JavaScript lab
+questions in this section.

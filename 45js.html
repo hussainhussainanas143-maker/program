@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>45. Store and Retrieve Data Using localStorage</title></head>
+<body>
+<input id="note" placeholder="Type a note">
+<button onclick="save()">Save</button>
+<button onclick="load()">Load</button>
+<p id="output"></p>
+<script>
+function save() {
+  localStorage.setItem("note", document.getElementById("note").value);
+  alert("Saved to localStorage!");
+}
+function load() {
+  const value = localStorage.getItem("note") || "(nothing saved yet)";
+  document.getElementById("output").textContent = "Stored note: " + value;
+}
+</script>
+</body></html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>46. Responsive Login Form With JS Validation</title>
+<style>
+body{font-family:Arial;display:flex;justify-content:center;padding:40px}
+form{width:100%;max-width:320px;background:#f7f7f7;padding:20px;border-radius:8px}
+input{width:100%;padding:8px;margin:8px 0;box-sizing:border-box}
+.error{color:red;font-size:.85em}
+</style></head>
+<body>
+<form onsubmit="return validateLogin()">
+  <h2>Login</h2>
+  <input id="email" type="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button type="submit">Login</button>
+  <div id="error" class="error"></div>
+</form>
+<script>
+function validateLogin() {
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+  const errorEl = document.getElementById("error");
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errorEl.textContent = "Please enter a valid email.";
+    return false;
+  }
+  if (password.length < 6) {
+    errorEl.textContent = "Password must be at least 6 characters.";
+    return false;
+  }
+  errorEl.textContent = "";
+  alert("Login successful!");
+  return false;
+}
+</script>
+</body></html>

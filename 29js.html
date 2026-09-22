@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>29. Number Guessing Game</title>
+<style>body{font-family:Arial;text-align:center;padding:40px}</style>
+</head>
+<body>
+<h2>Guess a number between 1 and 100</h2>
+<input id="guess" type="number">
+<button onclick="checkGuess()">Guess</button>
+<p id="msg"></p>
+<script>
+const target = Math.floor(Math.random() * 100) + 1;
+let attempts = 0;
+function checkGuess() {
+  const guess = parseInt(document.getElementById("guess").value);
+  attempts++;
+  const msg = document.getElementById("msg");
+  if (guess === target) msg.textContent = `Correct! The number was ${target}. Attempts: ${attempts}`;
+  else if (guess < target) msg.textContent = "Too low, try again.";
+  else msg.textContent = "Too high, try again.";
+}
+</script>
+</body></html>

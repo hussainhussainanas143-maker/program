@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>28. Simple Calculator</title>
+<style>body{font-family:Arial;text-align:center;padding:40px}input{width:80px;padding:6px}#result{font-weight:bold;margin-top:10px}</style>
+</head>
+<body>
+<input id="num1" type="number" value="0">
+<select id="op"><option value="+">+</option><option value="-">-</option><option value="*">*</option><option value="/">/</option></select>
+<input id="num2" type="number" value="0">
+<button onclick="calculate()">=</button>
+<div id="result"></div>
+<script>
+function calculate() {
+  const a = parseFloat(document.getElementById("num1").value);
+  const b = parseFloat(document.getElementById("num2").value);
+  const op = document.getElementById("op").value;
+  let result;
+  if (op === "+") result = a + b;
+  else if (op === "-") result = a - b;
+  else if (op === "*") result = a * b;
+  else result = b !== 0 ? a / b : "Cannot divide by 0";
+  document.getElementById("result").textContent = "Result: " + result;
+}
+</script>
+</body></html>

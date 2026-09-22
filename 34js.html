@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>34. Counter With Increment/Decrement</title>
+<style>body{font-family:Arial;text-align:center;padding:60px}#count{font-size:2em;margin:20px}</style>
+</head>
+<body>
+<div id="count">0</div>
+<button onclick="change(-1)">-</button>
+<button onclick="change(1)">+</button>
+<script>
+let count = 0;
+function change(amount) {
+  count += amount;
+  document.getElementById("count").textContent = count;
+}
+</script>
+</body></html>

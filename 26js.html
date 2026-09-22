@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>26. Change Image When Button Is Clicked</title></head>
+<body>
+<img id="pic" src="https://picsum.photos/id/1015/300/200" width="300">
+<br><button onclick="changeImage()">Next Image</button>
+<script>
+const images = [
+  "https://picsum.photos/id/1015/300/200",
+  "https://picsum.photos/id/1016/300/200",
+  "https://picsum.photos/id/1018/300/200"
+];
+let idx = 0;
+function changeImage() {
+  idx = (idx + 1) % images.length;
+  document.getElementById("pic").src = images[idx];
+}
+</script>
+</body></html>

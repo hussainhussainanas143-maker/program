@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>23. Change Background Color</title></head>
+<body>
+<button onclick="changeColor()">Change Background Color</button>
+<script>
+function changeColor() {
+  const colors = ["#f4a261", "#2a9d8f", "#e76f51", "#264653", "#e9c46a"];
+  document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+}
+</script>
+</body></html>

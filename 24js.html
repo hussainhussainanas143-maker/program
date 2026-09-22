@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>24. Button Click Event</title></head>
+<body>
+<button id="btn">Click Me</button>
+<p id="output">Not clicked yet</p>
+<script>
+let count = 0;
+document.getElementById("btn").addEventListener("click", function () {
+  count++;
+  document.getElementById("output").textContent = `Button clicked ${count} time(s)`;
+});
+</script>
+</body></html>

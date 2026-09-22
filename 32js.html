@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>32. To-Do List</title>
+<style>body{font-family:Arial;padding:40px}li{margin:6px 0}.remove{margin-left:10px;color:red;cursor:pointer}</style>
+</head>
+<body>
+<input id="taskInput" placeholder="New task">
+<button onclick="addTask()">Add</button>
+<ul id="list"></ul>
+<script>
+function addTask() {
+  const input = document.getElementById("taskInput");
+  const text = input.value.trim();
+  if (!text) return;
+  const li = document.createElement("li");
+  li.textContent = text;
+  const remove = document.createElement("span");
+  remove.textContent = "✕";
+  remove.className = "remove";
+  remove.onclick = () => li.remove();
+  li.appendChild(remove);
+  document.getElementById("list").appendChild(li);
+  input.value = "";
+}
+</script>
+</body></html>

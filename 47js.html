@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>47. Complete Interactive Webpage</title>
+<style>
+body{font-family:Arial;max-width:500px;margin:40px auto;padding:0 20px}
+input{padding:8px;width:70%}
+button{padding:8px 12px}
+li{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eee}
+</style></head>
+<body>
+<h2>Interactive Task List</h2>
+<input id="taskInput" placeholder="Add a task">
+<button onclick="addTask()">Add</button>
+<ul id="list"></ul>
+<p id="counter">Total tasks: 0</p>
+<script>
+let count = 0;
+function addTask() {
+  const input = document.getElementById("taskInput");
+  const text = input.value.trim();
+  if (!text) return;
+  const li = document.createElement("li");
+  li.innerHTML = `<span>${text}</span> <button onclick="this.parentElement.remove(); updateCount(-1)">✕</button>`;
+  document.getElementById("list").appendChild(li);
+  input.value = "";
+  updateCount(1);
+}
+function updateCount(delta) {
+  count += delta;
+  document.getElementById("counter").textContent = "Total tasks: " + count;
+}
+</script>
+</body></html>

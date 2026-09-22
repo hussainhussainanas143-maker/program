@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>36. Countdown Timer</title>
+<style>body{font-family:monospace;text-align:center;padding:60px}#timer{font-size:2.5em}</style>
+</head>
+<body>
+<input id="secondsInput" type="number" value="10" style="font-size:1.2em">
+<button onclick="startCountdown()">Start</button>
+<div id="timer">00:00</div>
+<script>
+let interval = null;
+function pad(n) { return String(n).padStart(2, "0"); }
+function startCountdown() {
+  clearInterval(interval);
+  let remaining = parseInt(document.getElementById("secondsInput").value) || 0;
+  const render = () => {
+    const m = Math.floor(remaining / 60), s = remaining % 60;
+    document.getElementById("timer").textContent = `${pad(m)}:${pad(s)}`;
+  };
+  render();
+  interval = setInterval(() => {
+    remaining--;
+    render();
+    if (remaining <= 0) { clearInterval(interval); alert("Time's up!"); }
+  }, 1000);
+}
+</script>
+</body></html>

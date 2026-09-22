@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>35. Stopwatch</title>
+<style>body{font-family:monospace;text-align:center;padding:60px}#time{font-size:2.5em}</style>
+</head>
+<body>
+<div id="time">00:00:00</div>
+<button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button>
+<button onclick="reset()">Reset</button>
+<script>
+let seconds = 0, interval = null;
+function pad(n) { return String(n).padStart(2, "0"); }
+function render() {
+  const h = Math.floor(seconds / 3600), m = Math.floor((seconds % 3600) / 60), s = seconds % 60;
+  document.getElementById("time").textContent = `${pad(h)}:${pad(m)}:${pad(s)}`;
+}
+function start() { if (!interval) interval = setInterval(() => { seconds++; render(); }, 1000); }
+function stop() { clearInterval(interval); interval = null; }
+function reset() { stop(); seconds = 0; render(); }
+</script>
+</body></html>
