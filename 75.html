@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>75. Complete Responsive Website</title>
+<style>
+*{box-sizing:border-box;margin:0;font-family:Arial}
+header{background:#1d3557;color:#fff;padding:16px 30px;display:flex;justify-content:space-between;flex-wrap:wrap}
+nav a{color:#fff;margin-left:16px;text-decoration:none}
+.hero{background:#457b9d;color:#fff;text-align:center;padding:70px 20px}
+.grid-section{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:30px}
+.grid-section .item{background:#f1faee;padding:20px;border-radius:8px}
+.flex-section{display:flex;flex-wrap:wrap;gap:16px;padding:30px;justify-content:center}
+.flex-section div{background:#a8dadc;padding:16px;border-radius:8px;flex:1 1 200px}
+footer{background:#1d3557;color:#fff;text-align:center;padding:16px}
+@media (max-width:600px){ header{flex-direction:column;text-align:center} nav a{margin:6px} }
+</style></head>
+<body>
+<header><strong>ResponsiveCo</strong><nav><a href="#">Home</a><a href="#">Services</a><a href="#">Contact</a></nav></header>
+<section class="hero"><h1>Fully Responsive Website</h1><p>Built with Flexbox, Grid, and media queries.</p></section>
+<section class="grid-section">
+  <div class="item">Grid Item 1</div><div class="item">Grid Item 2</div><div class="item">Grid Item 3</div>
+</section>
+<section class="flex-section">
+  <div>Flex Box A</div><div>Flex Box B</div><div>Flex Box C</div>
+</section>
+<footer>&copy; 2026 ResponsiveCo</footer>
+</body></html>

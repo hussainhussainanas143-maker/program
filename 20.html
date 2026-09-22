@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+        }
+
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px;
+        }
+
+        .skills {
+            display: flex;
+            gap: 20px;
+        }
+
+        .skill {
+            background-color: white;
+            padding: 30px;
+            flex: 1;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .skills {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mohammad Anas Hussain</h1>
+        <p>B.Tech Student | Programmer</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a B.Tech student interested in programming,
+            web development and technology.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Python</div>
+            <div class="skill">C Programming</div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: hussainhussainanas143@gmail.com</p>
+    </section>
+
+    <footer>
+        © 2026 My Portfolio
+    </footer>
+
+</body>
+</html>

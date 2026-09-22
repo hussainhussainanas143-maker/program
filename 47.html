@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>47. Dashboard Layout Using CSS Grid</title>
+<style>
+body{margin:0;font-family:Arial}
+.dashboard{display:grid;grid-template-columns:200px 1fr;grid-template-rows:60px 1fr;height:100vh;grid-template-areas:"sidebar header" "sidebar main"}
+header{grid-area:header;background:#1d3557;color:#fff;display:flex;align-items:center;padding:0 20px}
+.sidebar{grid-area:sidebar;background:#264653;color:#fff;padding:20px}
+main{grid-area:main;background:#f1faee;padding:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+main .widget{background:#fff;border-radius:8px;padding:16px;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+</style></head>
+<body>
+<div class="dashboard">
+  <header><h2>Dashboard</h2></header>
+  <div class="sidebar"><p>Home</p><p>Analytics</p><p>Settings</p></div>
+  <main>
+    <div class="widget">Users: 1,204</div>
+    <div class="widget">Sales: $8,420</div>
+    <div class="widget">Traffic: 34%</div>
+  </main>
+</div>
+</body></html>

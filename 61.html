@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>61. CSS Grid Template Areas</title>
+<style>
+body{margin:0;font-family:Arial}
+.layout{display:grid;height:100vh;grid-template-columns:200px 1fr 150px;grid-template-rows:60px 1fr 50px;
+  grid-template-areas:"header header header" "nav main aside" "footer footer footer"}
+header{grid-area:header;background:#1d3557;color:#fff;padding:10px}
+nav{grid-area:nav;background:#457b9d;color:#fff;padding:10px}
+main{grid-area:main;background:#f1faee;padding:10px}
+aside{grid-area:aside;background:#a8dadc;padding:10px}
+footer{grid-area:footer;background:#264653;color:#fff;padding:10px;text-align:center}
+</style></head>
+<body>
+<div class="layout">
+  <header>Header</header><nav>Nav</nav><main>Main Content</main><aside>Aside</aside><footer>Footer</footer>
+</div>
+</body></html>

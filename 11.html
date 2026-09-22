@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pseudo Elements</title>
+
+    <style>
+        p::before {
+            content: "★ ";
+            color: red;
+        }
+
+        p::after {
+            content: " ✓";
+            color: green;
+        }
+
+        p::first-letter {
+            font-size: 40px;
+            color: blue;
+        }
+
+        p::first-line {
+            font-weight: bold;
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <p>
+        This paragraph demonstrates CSS pseudo-elements.
+        The first letter and first line are styled differently.
+    </p>
+
+</body>
+</html>

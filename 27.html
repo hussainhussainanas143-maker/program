@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>27. Selector Types</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }        /* universal */
+p { line-height:1.5; }                                    /* element */
+.note { background:#fff3cd; padding:8px; }                /* class */
+#main-title { color:#1d3557; }                             /* ID */
+input[type="text"] { border:1px solid #999; padding:4px; } /* attribute */
+h1, h2, .note { font-family:Arial, sans-serif; }            /* grouping */
+</style></head>
+<body>
+<h1 id="main-title">Selector Demo</h1>
+<h2>Subheading</h2>
+<p class="note">This is a note styled by class selector.</p>
+<input type="text" placeholder="Styled by attribute selector">
+</body></html>

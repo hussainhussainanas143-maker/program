@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>28. Combinator Selectors</title>
+<style>
+div p { color:blue; }                 /* descendant: any p inside div */
+div > p { font-weight:bold; }         /* child: direct p children of div */
+h2 + p { color:green; }               /* adjacent sibling: p right after h2 */
+h2 ~ p { text-decoration:underline; } /* general sibling: all p after h2 */
+</style></head>
+<body>
+<div>
+  <h2>Heading</h2>
+  <p>Adjacent sibling paragraph (green, underlined, bold+blue as direct child).</p>
+  <span><p>Descendant but not direct child (blue only, not bold).</p></span>
+  <p>Another general sibling after h2 (underlined).</p>
+</div>
+</body></html>

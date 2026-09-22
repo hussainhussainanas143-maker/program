@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>29. CSS Variables</title>
+<style>
+:root{
+  --primary-color:#1d3557;
+  --secondary-color:#e63946;
+  --spacing:16px;
+  --radius:8px;
+}
+.box{
+  background:var(--primary-color);
+  color:#fff;
+  padding:var(--spacing);
+  border-radius:var(--radius);
+  margin:var(--spacing);
+}
+.box.alt{ background:var(--secondary-color); }
+</style></head>
+<body>
+<div class="box">Uses CSS custom properties (variables)</div>
+<div class="box alt">Same variables, different color override</div>
+</body></html>

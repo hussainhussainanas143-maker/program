@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Navigation</title>
+
+    <style>
+        nav {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 20px;
+        }
+
+        nav a:hover {
+            background-color: blue;
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav a {
+                border-bottom: 1px solid white;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <h1>Responsive Navigation Menu</h1>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive CSS</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .box {
+            flex: 1;
+            padding: 50px;
+            background-color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                background-color: lightgreen;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .box {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Responsive Webpage</h1>
+
+    <div class="container">
+
+        <div class="box">HTML</div>
+        <div class="box">CSS</div>
+        <div class="box">JavaScript</div>
+
+    </div>
+
+</body>
+</html>

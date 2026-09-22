@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>44. object-fit & object-position</title>
+<style>
+.box{width:200px;height:150px;border:2px solid #333;margin:15px;display:inline-block}
+img{width:100%;height:100%}
+.cover{object-fit:cover}
+.contain{object-fit:contain}
+.fill{object-fit:fill}
+.pos{object-fit:cover;object-position:top right}
+</style></head>
+<body style="text-align:center">
+<div class="box"><img class="cover" src="https://picsum.photos/400/200" alt="cover"></div>
+<div class="box"><img class="contain" src="https://picsum.photos/400/200" alt="contain"></div>
+<div class="box"><img class="fill" src="https://picsum.photos/400/200" alt="fill"></div>
+<div class="box"><img class="pos" src="https://picsum.photos/400/200" alt="position"></div>
+</body></html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>73. clamp(), min(), max() Functions</title>
+<style>
+body{font-family:Arial;padding:20px}
+h1{ font-size:clamp(1.5rem, 5vw, 3rem); }          /* fluid, bounded font size */
+.box{ width:min(90%, 500px); background:#f1faee; padding:20px; margin:20px auto; border-radius:8px; }
+.gap{ padding:max(10px, 3vw); background:#a8dadc; }
+</style></head>
+<body>
+<h1>Clamp Heading</h1>
+<div class="box">width: min(90%, 500px) — never wider than 500px</div>
+<div class="gap">padding: max(10px, 3vw) — grows with viewport but never below 10px</div>
+</body></html>

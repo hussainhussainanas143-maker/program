@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>54. Responsive Contact Form</title>
+<style>
+body{font-family:Arial;background:#f7f7f7;display:flex;justify-content:center;padding:40px}
+form{background:#fff;padding:30px;border-radius:8px;width:100%;max-width:420px;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+label{display:block;margin-top:12px;font-weight:bold}
+input,textarea{width:100%;padding:10px;margin-top:6px;border:1px solid #ccc;border-radius:5px;box-sizing:border-box;font-family:inherit}
+button{margin-top:16px;padding:12px;width:100%;background:#264653;color:#fff;border:none;border-radius:5px;cursor:pointer}
+</style></head>
+<body>
+<form onsubmit="return false">
+  <h2>Contact Us</h2>
+  <label>Name</label><input type="text" required>
+  <label>Email</label><input type="email" required>
+  <label>Message</label><textarea rows="4" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+</body></html>

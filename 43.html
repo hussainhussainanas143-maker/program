@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>43. CSS Filters</title>
+<style>
+.grid{display:grid;grid-template-columns:repeat(2,200px);gap:20px;padding:30px;font-family:Arial}
+.grid figure{margin:0;text-align:center}
+img{width:200px;height:130px;object-fit:cover;border-radius:6px}
+.blur img{filter:blur(3px)}
+.gray img{filter:grayscale(100%)}
+.bright img{filter:brightness(1.6)}
+.contrast img{filter:contrast(200%)}
+</style></head>
+<body>
+<div class="grid">
+  <figure class="blur"><img src="https://picsum.photos/id/1015/200/130"><figcaption>blur(3px)</figcaption></figure>
+  <figure class="gray"><img src="https://picsum.photos/id/1016/200/130"><figcaption>grayscale(100%)</figcaption></figure>
+  <figure class="bright"><img src="https://picsum.photos/id/1018/200/130"><figcaption>brightness(1.6)</figcaption></figure>
+  <figure class="contrast"><img src="https://picsum.photos/id/1019/200/130"><figcaption>contrast(200%)</figcaption></figure>
+</div>
+</body></html>

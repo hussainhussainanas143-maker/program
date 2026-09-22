@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>53. Responsive Login & Signup</title>
+<style>
+body{margin:0;font-family:Arial;background:#f1faee;display:flex;justify-content:center;align-items:center;min-height:100vh}
+.auth-box{background:#fff;padding:30px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,.1);width:320px;max-width:90%}
+.tabs{display:flex;margin-bottom:20px}
+.tabs button{flex:1;padding:10px;border:none;background:#eee;cursor:pointer}
+.tabs button.active{background:#1d3557;color:#fff}
+input{width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:5px;box-sizing:border-box}
+.submit{width:100%;padding:10px;background:#e63946;color:#fff;border:none;border-radius:5px;cursor:pointer;margin-top:10px}
+</style></head>
+<body>
+<div class="auth-box">
+  <div class="tabs"><button class="active">Login</button><button>Sign Up</button></div>
+  <input type="email" placeholder="Email">
+  <input type="password" placeholder="Password">
+  <button class="submit">Login</button>
+</div>
+</body></html>

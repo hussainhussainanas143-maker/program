@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>62. Flexbox Alignment & Ordering</title>
+<style>
+.flex{display:flex;justify-content:space-between;align-items:center;height:120px;background:#f1faee;padding:10px;margin-bottom:10px}
+.flex div{background:#457b9d;color:#fff;padding:10px 16px;border-radius:4px}
+.order-demo{display:flex}
+.order-demo .first{order:3}
+.order-demo .second{order:1}
+.order-demo .third{order:2}
+</style></head>
+<body>
+<div class="flex"><div>A</div><div>B</div><div>C</div></div>
+<div class="order-demo">
+  <div class="first">Ordered Last (order:3)</div>
+  <div class="second">Ordered First (order:1)</div>
+  <div class="third">Ordered Middle (order:2)</div>
+</div>
+</body></html>
